@@ -29,14 +29,14 @@ def single_selection(split, zero_shot=False):
         f = open("data/selection/" + split + "_single.json", "w")
         question_set = q1 + q2
     
-    for x in data:
-        if len(x["Correct Answers"]) == 1 and x["Question"] in question_set:
-            choices = x["Choices"]
-            context = sep.join([x["Question"], "target: " + x["Target"], "context: " + " <utt> ".join(x["Dialogue"])])
+    for instance in data:
+        if len(instance["Correct Answers"]) == 1 and instance["Question"] in question_set:
+            choices = instance["Choices"]
+            context = sep.join([instance["Question"], "target: " + instance["Target"], "context: " + " <utt> ".join(instance["Dialogue"])])
             line = {
-                "ID": x["ID"], "context": context, "choice0": choices[0], "choice1": choices[1], 
+                "ID": instance["ID"], "context": context, "choice0": choices[0], "choice1": choices[1], 
                 "choice2": choices[2], "choice3": choices[3], "choice4": choices[4], 
-                "label": x["Correct Answers"][0]
+                "label": instance["Correct Answers"][0]
             }
             f.write(json.dumps(line) + "\n")
     f.close()
@@ -59,16 +59,16 @@ def single_generation(split, zero_shot=False):
         f = open("data/generation/" + split + "_single.json", "w")
         question_set = q1 + q2
     
-    for x in data:
-        if len(x["Correct Answers"]) == 1 and x["Question"] in question_set:
-            choices, choice_str = x["Choices"], ""
+    for instance in data:
+        if len(instance["Correct Answers"]) == 1 and instance["Question"] in question_set:
+            choices, choice_str = instance["Choices"], ""
             for k, num in enumerate(["(0)", "(1)", "(2)", "(3)", "(4)"]):
                 choice_str += num + " " + choices[k] + " "
             choice_str = choice_str[:-1]
             
-            context = sep.join([x["Question"], "target: " + x["Target"], choice_str,
-                                "context: " + " <utt> ".join(x["Dialogue"])])
-            correct_choice = choices[x["Correct Answers"][0]]
+            context = sep.join([instance["Question"], "target: " + instance["Target"], choice_str,
+                                "context: " + " <utt> ".join(instance["Dialogue"])])
+            correct_choice = choices[instance["Correct Answers"][0]]
             
             line = {"input": context, "output": correct_choice}
             f.write(json.dumps(line) + "\n")
@@ -92,17 +92,17 @@ def all_generation(split, zero_shot=False):
         f = open("data/generation/" + split + "_all.json", "w")
         question_set = q1 + q2
     
-    for x in data:
-        if x["Question"] in question_set:
-            choices, choice_str = x["Choices"], ""
+    for instance in data:
+        if instance["Question"] in question_set:
+            choices, choice_str = instance["Choices"], ""
             for k, num in enumerate(["(0)", "(1)", "(2)", "(3)", "(4)"]):
                 choice_str += num + " " + choices[k] + " "
             choice_str = choice_str[:-1]
             
-            context = sep.join([x["Question"], "target: " + x["Target"], choice_str,
-                                "context: " + " <utt> ".join(x["Dialogue"])])
+            context = sep.join([instance["Question"], "target: " + instance["Target"], choice_str,
+                                "context: " + " <utt> ".join(instance["Dialogue"])])
             
-            correct_choices = sep.join([choices[index] for index in x["Correct Answers"]])
+            correct_choices = sep.join([choices[index] for index in instance["Correct Answers"]])
             
             line = {"input": context, "output": correct_choices}
             f.write(json.dumps(line) + "\n")
