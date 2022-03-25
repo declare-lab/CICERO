@@ -9,10 +9,23 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 ## Data Format
 
-## Run Experiments
+The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/tree/main/data) directory. Each line of the files is an json object indicating a single instance. The json objects have the following format:
 
-Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq) to run the answer selection (MCQ) experiments.
-Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg) to run the answer generation (NLG) experiments.
+| Key 	    | Description 	|
+|-----------| -----:|
+| ID 	    | Dialogue ID with dataset indicator. 	|
+| Dialogue 	| Utterances of the dialogue in a list.	|
+| Target 	| Target utterance. 	|
+| Question 	| One of the five questions (inference types). 	|
+| Choices   | Five possible answer choices in a list.<br>One of the answers is human writtem.<br>The other four answers are machine generated and<br>selected through the Adversarial Filtering (AF) algorithm. |
+| Human Written Answer | Index of the human written answer in a single element list.<br>Index starts from 0. |
+| Correct Answers | List of all correct answers indicated as plausible<br>and/or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
+---------------------------------------------------------------------------
+
+## Experiments
+
+The details of the answer selection (MCQ) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq).
+The details of the answer generation (NLG) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg).
 
 ## Citation
 
