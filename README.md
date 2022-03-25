@@ -13,6 +13,6 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 # Run Experiments
 
-## Generating Inferences ($$CICERO_{NLG}$$)
+## Generating Inferences (CICERO_{NLG})
 
-## Answer Selection ($CICERO_{MCQ}$)
+## Answer Selection (CICERO_{MCQ})
