@@ -11,8 +11,8 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/tree/main/data) directory. Each line of the files is an json object indicating a single instance. The json objects have the following format:
 
-|-----------| -----:|
 | Key 	    | Description 	|
+|:----------| -----:|
 | ID 	    | Dialogue ID with dataset indicator. 	|
 | Dialogue 	| Utterances of the dialogue in a list.	|
 | Target 	| Target utterance. 	|
