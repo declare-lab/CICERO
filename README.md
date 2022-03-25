@@ -17,9 +17,9 @@ The CICERO dataset can be found in the [data](https://github.com/declare-lab/CIC
 | Dialogue 	| Utterances of the dialogue in a list.	|
 | Target 	| Target utterance. 	|
 | Question 	| One of the five questions (inference types). 	|
-| Choices   | Five possible answer choices in a list.<br>One of the answers is human writtem.<br>The other four answers are machine generated and<br>selected through the Adversarial Filtering (AF) algorithm. |
-| Human Written Answer | Index of the human written answer in a single element list.<br>Index starts from 0. |
-| Correct Answers | List of all correct answers indicated as plausible<br>and/or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
+| Choices   | Five possible answer choices in a list. One of the answers is<br>human written. The other four answers are machine generated<br>and selected through the Adversarial Filtering (AF) algorithm. |
+| Human Written Answer | Index of the human written answer in a<br>single element list. Index starts from 0. |
+| Correct Answers | List of all correct answers indicated as plausible<br>or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
 ---------------------------------------------------------------------------
 
 ## Experiments
