@@ -2,7 +2,7 @@
 
 The following script will prepare the dataset in appropriate format for the single answer selection (with RoBERTa and ELECTRA), single answer generation (T5 and UnifiedQA), and all answer(s) generation (T5 and UnifiedQA) tasks.
 ```
-python prepare_data.py
+python prepare.py
 ```
 
 ## Training
