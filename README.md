@@ -9,7 +9,7 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 ## Data Format
 
-## Run Experiments
+## Run the Experiments
 
 Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq) to run the answer selection (MCQ) experiments.
 Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg) to run the answer generation (NLG) experiments.
