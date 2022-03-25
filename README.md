@@ -7,12 +7,13 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 [Read the paper]()
 
-# Data Format
+## Data Format
 
-# Data Preparation
+## Run Experiments
 
-# Run Experiments
+Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq) to run the answer selection (MCQ) experiments.
+Refer [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg) to run the answer generation (NLG) experiments.
 
-## Generating Inferences (CICERO_{NLG})
+## Citation
 
-## Answer Selection (CICERO_{MCQ})
+CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues. Deepanway Ghosal and Siqi Shen and Navonil Majumder and Rada Mihalcea and Soujanya Poria. ACL 2022.
