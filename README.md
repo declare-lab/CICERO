@@ -21,6 +21,8 @@ The CICERO dataset can be found in the [data](https://github.com/declare-lab/CIC
 | Correct Answers | List of all correct answers indicated as plausible<br>or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
 ---------------------------------------------------------------------------
 
+An example of the data is shown below.
+
 ```
     {
         "ID": "daily-dialogue-1291",
@@ -60,4 +62,6 @@ The details of the answer generation (NLG) experiments can be found [here](https
 
 ## Citation
 
+```
 CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues. Deepanway Ghosal and Siqi Shen and Navonil Majumder and Rada Mihalcea and Soujanya Poria. ACL 2022.
+```
