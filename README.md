@@ -23,7 +23,7 @@ The CICERO dataset can be found in the [data](https://github.com/declare-lab/CIC
 
 ## Experiments
 
-![image-center](https://declare-lab.net/assets/images/resources/MCQ-cider2-new5.png)
+<img src="https://declare-lab.net/assets/images/resources/MCQ-cider2-new5.png" alt="CICERO Tasks" width="800"/>
 
 The details of the answer selection (MCQ) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq).
 The details of the answer generation (NLG) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg).
