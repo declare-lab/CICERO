@@ -21,6 +21,36 @@ The CICERO dataset can be found in the [data](https://github.com/declare-lab/CIC
 | Correct Answers | List of all correct answers indicated as plausible<br>or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
 ---------------------------------------------------------------------------
 
+```
+    {
+        "ID": "daily-dialogue-1291",
+        "Dialogue": [
+            "A: Hello , is there anything I can do for you ?",
+            "B: Yes . I would like to check in .",
+            "A: Have you made a reservation ?",
+            "B: Yes . I am Belen .",
+            "A: So your room number is 201 . Are you a member of our hotel ?",
+            "B: No , what's the difference ?",
+            "A: Well , we offer a 10 % charge for our members ."
+        ],
+        "Target": "Well , we offer a 10 % charge for our members .",
+        "Question": "What subsequent event happens or could happen following the target?",
+        "Choices": [
+            "For future discounts at the hotel, the listener takes a credit card at the hotel.",
+            "The listener is not enrolled in a hotel membership.",
+            "For future discounts at the airport, the listener takes a membership at the airport.",
+            "For future discounts at the hotel, the listener takes a membership at the hotel.",
+            "The listener doesn't have a membership to the hotel."
+        ],
+        "Human Written Answer": [
+            3
+        ],
+        "Correct Answers": [
+            3
+        ]
+    }
+ ```
+
 ## Experiments
 
 <img src="https://declare-lab.net/assets/images/resources/MCQ-cider2-new5.png" alt="CICERO Tasks" width="800"/>
