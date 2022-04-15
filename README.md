@@ -8,7 +8,7 @@ Introducing CICERO, a new dataset for dialogue reasoning with contextualized com
 
 ## Data Format
 
-The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/tree/main/data) directory. Each line of the files is a json object indicating a single instance. The json objects have the following key-value pairs:
+The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip) directory. Each line of the files is a json object indicating a single instance. The json objects have the following key-value pairs:
 
 | Key 	    | Value 	|
 |:----------:| :-----:|
