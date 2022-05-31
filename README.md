@@ -10,6 +10,13 @@ We introduce CICERO, a new dataset for dialogue reasoning with contextualized co
 
 [Download the dataset](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip)
 
+The dataset can also be accessed with the huggingface `datasets` library
+
+```
+from datasets import load_dataset
+dataset = load_dataset("declare-lab/cicero")
+```
+
 ## Data Format
 
 The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip) directory. Each line of the files is a json object indicating a single instance. The json objects have the following key-value pairs:
