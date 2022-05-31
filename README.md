@@ -2,9 +2,12 @@
 
 <img src="https://declare-lab.net/assets/images/resources/cicero.png" alt="CICERO Inferences" width="800"/>
 
-Introducing CICERO, a new dataset for dialogue reasoning with contextualized commonsense inference. It contains 53K inferences for five commonsense dimensions – cause, subsequent event, prerequisite, motivation, and emotional reaction collected from  5.6K dialogues. To show the usefulness of CICERO for dialogue reasoning, we design several challenging generative and multichoice answer selection tasks for state-of-the-art NLP models to solve.
+We introduce CICERO, a new dataset for dialogue reasoning with contextualized commonsense inference. It contains 53K inferences for five commonsense dimensions – cause, subsequent event, prerequisite, motivation, and emotional reaction collected from 5.6K dialogues. We design several generative and multi-choice answer selection tasks to show the usefulness of CICERO in dialogue reasoning.
 
-[Read the paper](https://arxiv.org/pdf/2203.13926.pdf)
+[Paper in ACL Anthology](https://aclanthology.org/2022.acl-long.344/)
+
+[Paper in arXiv](https://arxiv.org/abs/2203.13926)
+
 [Download the dataset](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip)
 
 ## Data Format
@@ -65,4 +68,23 @@ The details of the answer generation (NLG) experiments can be found [here](https
 
 ```
 CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues. Deepanway Ghosal and Siqi Shen and Navonil Majumder and Rada Mihalcea and Soujanya Poria. ACL 2022.
+```
+
+### BibTeX
+```
+@inproceedings{ghosal-etal-2022-cicero,
+    title = "{CICERO}: A Dataset for Contextualized Commonsense Inference in Dialogues",
+    author = "Ghosal, Deepanway  and
+      Shen, Siqi  and
+      Majumder, Navonil  and
+      Mihalcea, Rada  and
+      Poria, Soujanya",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.344",
+    pages = "5010--5028",
+}
 ```
