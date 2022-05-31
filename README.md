@@ -14,7 +14,7 @@ The dataset can also be accessed with the huggingface `datasets` library
 
 ```
 from datasets import load_dataset
-dataset = load_dataset("declare-lab/cicero")
+cicero = load_dataset("declare-lab/cicero")
 ```
 
 ## Data Format
