@@ -75,6 +75,40 @@ def single_generation(split, zero_shot=False):
     f.close()
     
     
+def multiple_generation(split, zero_shot=False):
+    """
+    Prepares data for the only multiple-answers generation task for the T5 and UnifiedQA models.
+    """
+    data = [json.loads(line) for line in open("../../data/" + split + ".json").readlines()]
+    sep = " \\n "
+    
+    if zero_shot:
+        f = open("data/generation/" + split + "_zs_multiple.json", "w")
+        if split == "test":
+            question_set = q2
+        else:
+            question_set = q1
+    else:
+        f = open("data/generation/" + split + "_multiple.json", "w")
+        question_set = q1 + q2
+    
+    for instance in data:
+        if len(instance["Correct Answers"]) > 1 and instance["Question"] in question_set:
+            choices, choice_str = instance["Choices"], ""
+            for k, num in enumerate(["(0)", "(1)", "(2)", "(3)", "(4)"]):
+                choice_str += num + " " + choices[k] + " "
+            choice_str = choice_str[:-1]
+            
+            context = sep.join([instance["Question"], "target: " + instance["Target"], choice_str,
+                                "context: " + " <utt> ".join(instance["Dialogue"])])
+            
+            correct_choices = sep.join([choices[index] for index in instance["Correct Answers"]])
+            
+            line = {"input": context, "output": correct_choices}
+            f.write(json.dumps(line) + "\n")
+    f.close()
+    
+    
 def all_generation(split, zero_shot=False):
     """
     Prepares data for the all answer(s) generation task for the T5 and UnifiedQA models.
@@ -118,5 +152,7 @@ if __name__ == "__main__":
         single_selection(split, zero_shot=True)
         single_generation(split)
         single_generation(split, zero_shot=True)
+        multiple_generation(split)
+        multiple_generation(split, zero_shot=True)
         all_generation(split)
         all_generation(split, zero_shot=True)

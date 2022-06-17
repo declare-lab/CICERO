@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=0 python run_seq2seq.py --learning_rate=3e-5 --adafactor --
 
 Use `--model_name_or_path allenai/unifiedqa-t5-large` to train the UnifiedQA Large model. 
 
-The all answer(s) generation model can be trained using the same script above by changing `--train_file` and `--validation_file` to `data/generation/*_all.json` .
+The multiple or all answer(s) generation model can be trained using the same script above by changing `--train_file` and `--validation_file` to `data/generation/*_multiple.json` or `data/generation/*_all.json` .
 
 
 ## Evaluation
@@ -45,3 +45,9 @@ CUDA_VISIBLE_DEVICES=0 python run_mcq.py --validation_file="data/selection/test_
 --report_to "wandb" --run_name "Roberta Selection"
 ```
 
+For evaluation of MCQ generative models you can use the `evaluation.py` script with the trained model path and the appropriate `mode` (single, multiple, or all)
+```
+CUDA_VISIBLE_DEVICES=0 python evaluation.py --path "saved/t5_single/checkpoint-*/" --mode "single" --max-len 25
+CUDA_VISIBLE_DEVICES=0 python evaluation.py --path "saved/t5_multi/checkpoint-*/" --mode "multiple" --max-len 100
+CUDA_VISIBLE_DEVICES=0 python evaluation.py --path "saved/t5_all/checkpoint-*/" --mode "all" --max-len 100
+```
