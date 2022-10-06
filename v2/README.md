@@ -19,7 +19,7 @@ This repository contains the implementation of the following paper:
 
 <img src="https://drive.google.com/uc?export=download&id=14RIbxgXhREdu5xZiKn5D-UUzaQLDNLqf" alt="CICERO_v2 Inferences" width="800"/>
 <br>
-<b>Image to be replaced</b>
+
 
 ## Resources
 
