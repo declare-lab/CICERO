@@ -10,7 +10,7 @@ This repository contains the implementation of the following paper:
 
 > **Multiview Contextual Commonsense Inference: A New Dataset and Task**<br>
 > Authors <br>
-> 
+> Deepanway Ghosal, Siqi Shen, Navonil Majumder, Henry Lim, Rada Mihalcea, Soujanya Poria
 >
 > **Abstract:** 
 > <br> *Contextual commonsense inference is the task of generating various types of explanations around the events in a dyadic dialogue, including cause, motivation, emotional reaction, and others. Producing a coherent and non-trivial explanation requires awareness of the dialogue's structure and of how an event is grounded in the context.*
@@ -84,5 +84,14 @@ sh script/evaluate.sh $finetuned_model $data_version
 Please cite this repository using the following reference:
 
 ```
-
+@inproceedings{ghosal-etal-2022-cicero,
+    title = "Multiview Contextual Commonsense Inference: A New Dataset and Task",
+    author = "Shen, Siqi  and 
+      Ghosal, Deepanway  and
+      Majumder, Navonil  and
+      Lim, Henry and
+      Mihalcea, Rada  and
+      Poria, Soujanya",
+    journal = "arxiv"
+}
 ```
