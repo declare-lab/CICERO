@@ -10,7 +10,7 @@ This repository contains the implementation of the following paper:
 
 > **Multiview Contextual Commonsense Inference: A New Dataset and Task**<br>
 > Authors <br>
-> https://www.overleaf.com/project/6269f7e19338f1d031212f25
+> 
 >
 > **Abstract:** 
 > <br> *Contextual commonsense inference is the task of generating various types of explanations around the events in a dyadic dialogue, including cause, motivation, emotional reaction, and others. Producing a coherent and non-trivial explanation requires awareness of the dialogue's structure and of how an event is grounded in the context.*
