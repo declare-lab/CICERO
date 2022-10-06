@@ -11,29 +11,6 @@ In this dataset, each training instance is associated with only one human-writte
 
 Depending on a situation, multiple different reasonings are possible each leading to various unique inferences. In constructing CICERO-v2, we asked annotators to write more than one plausible inference for dialogue contexts. We call this task --- Multiview Contextual Commonsense Inference, a highly challenging task for large language models.
 
-| **Description**                  | CICERO-v2 | CICERO-v1   |
-|---------------------------------------|---------------------|-------------------|
-|  \# Dialogues / \# Instances       |                     |                   |
-|  DailyDialog                   | 1,025 / 3,422       | 2,113 / 4,344     |
-|  MuTual                        | 989 / 3,293         | 929 / 1,715       |
-|  DREAM                         | 243 / 946           | 516 / 1,386       |
-|   **Total**                     | 2,257 / 7,661       | 3,558 / 7,445     |
-| \# Dialogues with \# Instances    |                     |                   |
-|  $<$ 4                         | 1,352               | 3,057             |
-|  4 $\leq * \leq$ 8             | 839                 | 493               |
-|  $>$ 8                         | 66                  | 8                 |
-|  Avg. \# of Correct Answers        | 2.38                | 2.49              |
-|  Instances with \# Correct Answers |                     |                   |
-|  $=$ 2                         | 4,768               | 4,985             |
-|  $=$ 3                         | 2,869               | 1,552             |
-|  $>$ 3                         | 24                  | 908               |
-| Question Types in                 |
-|  Cause                         | 927 / 189 / 243     | 1,301 / 381 / 514 |
-|  Subsequent Event              | 1,999 / 618 / 793   | 1,193 / 568 / 759 |
-|  Motivation                    | 1,343 / 330 / 480   | 455 / 163 / 194   |
-|  Reaction                      | 482 / 116 / 141     | 234 / 105 / 116   |
-|  Prerequisite                  | -                   | 1,010 / 201 / 251 |
-
 ## Citation
 
 If these datasets are useful in your research, please cite the following papers:
