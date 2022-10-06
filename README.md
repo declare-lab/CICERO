@@ -1,84 +1,51 @@
-# CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues
+# Contextualized Commonsense Inference in Dialogues (CICERO)
 
-<img src="https://declare-lab.net/assets/images/resources/cicero.png" alt="CICERO Inferences" width="800"/>
+The purpose of this repository is to introduce new dialogue-level commonsense inference datasets and tasks. We chose dialogues as the data source because dialogues are known to be complex and rich in commonsense. At present, we have released two versions of the dataset:
 
-We introduce CICERO, a new dataset for dialogue reasoning with contextualized commonsense inference. It contains 53K inferences for five commonsense dimensions – cause, subsequent event, prerequisite, motivation, and emotional reaction collected from 5.6K dialogues. We design several generative and multi-choice answer selection tasks to show the usefulness of CICERO in dialogue reasoning.
+## CICERO-v1
 
-[Paper in ACL Anthology](https://aclanthology.org/2022.acl-long.344/)
+CICERO-v1 can be found here: https://github.com/declare-lab/CICERO/tree/main/v1.
+In this dataset, each training instance is associated with only one human-written inference. There are two tasks pertaining to this dataset: 1) generative commonsense inference in dialogues, and 2) multiple choice answer selection.
 
-[Paper in arXiv](https://arxiv.org/abs/2203.13926)
+## CICERO-v2
 
-[Download the dataset](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip)
+Depending on a situation, multiple different reasonings are possible each leading to various unique inferences. In constructing CICERO-v2, we asked annotators to write more than one plausible inference for dialogue contexts. We call this task --- Multiview Contextual Commonsense Inference, a highly challenging task for large language models.
 
-The dataset can also be accessed with the huggingface `datasets` library
-
-```
-from datasets import load_dataset
-cicero = load_dataset("declare-lab/cicero")
-```
-
-## Data Format
-
-The CICERO dataset can be found in the [data](https://github.com/declare-lab/CICERO/releases/download/v1.0.0/data.zip) directory. Each line of the files is a json object indicating a single instance. The json objects have the following key-value pairs:
-
-| Key 	    | Value 	|
-|:----------:| :-----:|
-| ID 	    | Dialogue ID with dataset indicator. 	|
-| Dialogue 	| Utterances of the dialogue in a list.	|
-| Target 	| Target utterance. 	|
-| Question 	| One of the five questions (inference types). 	|
-| Choices   | Five possible answer choices in a list. One of the answers is<br>human written. The other four answers are machine generated<br>and selected through the Adversarial Filtering (AF) algorithm. |
-| Human Written Answer | Index of the human written answer in a<br>single element list. Index starts from 0. |
-| Correct Answers | List of all correct answers indicated as plausible<br>or speculatively correct by the human annotators.<br>Includes the index of the human written answer. |
----------------------------------------------------------------------------
-
-An example of the data is shown below.
-
-```
-{
-    "ID": "daily-dialogue-1291",
-    "Dialogue": [
-        "A: Hello , is there anything I can do for you ?",
-        "B: Yes . I would like to check in .",
-        "A: Have you made a reservation ?",
-        "B: Yes . I am Belen .",
-        "A: So your room number is 201 . Are you a member of our hotel ?",
-        "B: No , what's the difference ?",
-        "A: Well , we offer a 10 % charge for our members ."
-    ],
-    "Target": "Well , we offer a 10 % charge for our members .",
-    "Question": "What subsequent event happens or could happen following the target?",
-    "Choices": [
-        "For future discounts at the hotel, the listener takes a credit card at the hotel.",
-        "The listener is not enrolled in a hotel membership.",
-        "For future discounts at the airport, the listener takes a membership at the airport.",
-        "For future discounts at the hotel, the listener takes a membership at the hotel.",
-        "The listener doesn't have a membership to the hotel."
-    ],
-    "Human Written Answer": [
-        3
-    ],
-    "Correct Answers": [
-        3
-    ]
-}
- ```
-
-## Experiments
-
-The details of the answer selection (MCQ) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/mcq).
-The details of the answer generation (NLG) experiments can be found [here](https://github.com/declare-lab/CICERO/tree/main/experiments/nlg).
-
-<img src="https://declare-lab.net/assets/images/resources/MCQ-cider2-new5.png" alt="CICERO Tasks" width="800"/>
+| \textbf{Description}                  | \textbf{\dataset{}} | \textbf{CICERO}   |
+|---------------------------------------|---------------------|-------------------|
+| \bf \# Dialogues / \# Instances       |                     |                   |
+| $\quad$ DailyDialog                   | 1,025 / 3,422       | 2,113 / 4,344     |
+| $\quad$ MuTual                        | 989 / 3,293         | 929 / 1,715       |
+| $\quad$ DREAM                         | 243 / 946           | 516 / 1,386       |
+| $\quad$ \bf Total                     | 2,257 / 7,661       | 3,558 / 7,445     |
+| \# \bf Dialogues with \# Instances    |                     |                   |
+| $\quad$ $<$ 4                         | 1,352               | 3,057             |
+| $\quad$ 4 $\leq * \leq$ 8             | 839                 | 493               |
+| $\quad$ $>$ 8                         | 66                  | 8                 |
+| % \bf Avg. \# Inferences per Dialogue |                     | --                |
+| % \bf \# Total Answers                |                     |                   |
+| % $\quad$ $=$ 4                       | 4541                |                   |
+| % $\quad$ $=$ 5                       | 2456                |                   |
+| % $\quad$ $>$ 5                       | 52                  |                   |
+| \bf Avg. \# of Correct Answers        | 2.38                | 2.49              |
+| \bf Instances with \# Correct Answers |                     |                   |
+| $\quad$ $=$ 2                         | 4,768               | 4,985             |
+| $\quad$ $=$ 3                         | 2,869               | 1,552             |
+| $\quad$ $>$ 3                         | 24                  | 908               |
+| \bf Question Types in                 |
+| $\quad$ Cause                         | 927 / 189 / 243     | 1,301 / 381 / 514 |
+| $\quad$ Subsequent Event              | 1,999 / 618 / 793   | 1,193 / 568 / 759 |
+| $\quad$ Motivation                    | 1,343 / 330 / 480   | 455 / 163 / 194   |
+| $\quad$ Reaction                      | 482 / 116 / 141     | 234 / 105 / 116   |
+| $\quad$ Prerequisite                  | -                   | 1,010 / 201 / 251 |
+| % $\quad$ \bf Total                   |                     |                   |
 
 ## Citation
 
-```
-CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues. Deepanway Ghosal and Siqi Shen and Navonil Majumder and Rada Mihalcea and Soujanya Poria. ACL 2022.
-```
+If these datasets are useful in your research, please cite the following papers:
 
-### BibTeX
-```
+### CICERO-v1
+
 @inproceedings{ghosal-etal-2022-cicero,
     title = "{CICERO}: A Dataset for Contextualized Commonsense Inference in Dialogues",
     author = "Ghosal, Deepanway  and
@@ -94,4 +61,16 @@ CICERO: A Dataset for Contextualized Commonsense Inference in Dialogues. Deepanw
     url = "https://aclanthology.org/2022.acl-long.344",
     pages = "5010--5028",
 }
-```
+
+### CICERO-v2
+
+@inproceedings{shen-et-al-cicerov2-2022,
+    title = "Multiview Contextual Commonsense Inference: A New Dataset and Task",
+    author = "Shen, Siqi  and 
+      Ghosal, Deepanway  and
+      Majumder, Navonil  and
+      Lim, Henry and
+      Mihalcea, Rada  and
+      Poria, Soujanya",
+    journal = "arxiv"
+}
