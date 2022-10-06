@@ -107,7 +107,7 @@ preshed==3.0.6
 prometheus-client==0.14.1
 promise==2.3
 prompt-toolkit==3.0.29
-protobuf==3.20.1
+protobuf==3.20.2
 psutil==5.9.1
 ptyprocess==0.7.0
 pure-eval==0.2.2
