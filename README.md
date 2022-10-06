@@ -9,7 +9,7 @@ In this dataset, each training instance is associated with only one human-writte
 
 ## CICERO-v2
 
-Depending on a situation, multiple different reasonings are possible each leading to various unique inferences. In constructing CICERO-v2, we asked annotators to write more than one plausible inference for dialogue contexts. We call this task --- Multiview Contextual Commonsense Inference, a highly challenging task for large language models.
+Depending on a situation, multiple different reasonings are possible each leading to various unique inferences. In constructing CICERO-v2, we asked annotators to write more than one plausible inference for each dialogue context. We call this task --- Multiview Contextual Commonsense Inference, a highly challenging task for large language models.
 
 ## Citation
 
