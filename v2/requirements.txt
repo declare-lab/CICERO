@@ -60,7 +60,7 @@ ipywidgets==7.7.1
 itsdangerous==2.1.2
 jedi==0.18.1
 Jinja2==3.1.2
-joblib==1.1.0
+joblib==1.2.0
 json5==0.9.8
 jsonschema==4.5.1
 jupyter-client==7.3.1
