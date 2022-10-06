@@ -84,7 +84,7 @@ sh script/evaluate.sh $finetuned_model $data_version
 Please cite this repository using the following reference:
 
 ```
-@inproceedings{ghosal-etal-2022-cicero,
+@inproceedings{shen-et-al-cicerov2-2022,
     title = "Multiview Contextual Commonsense Inference: A New Dataset and Task",
     author = "Shen, Siqi  and 
       Ghosal, Deepanway  and
