@@ -13,7 +13,7 @@ Depending on a situation, multiple different reasonings are possible each leadin
 
 | **Description**                  | CICERO-v2 | CICERO-v1   |
 |---------------------------------------|---------------------|-------------------|
-| ** \# Dialogues / \# Instances    **   |                     |                   |
+|  \# Dialogues / \# Instances       |                     |                   |
 | $\quad$ DailyDialog                   | 1,025 / 3,422       | 2,113 / 4,344     |
 | $\quad$ MuTual                        | 989 / 3,293         | 929 / 1,715       |
 | $\quad$ DREAM                         | 243 / 946           | 516 / 1,386       |
