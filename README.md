@@ -46,6 +46,7 @@ If these datasets are useful in your research, please cite the following papers:
 
 ### CICERO-v1
 
+```
 @inproceedings{ghosal-etal-2022-cicero,
     title = "{CICERO}: A Dataset for Contextualized Commonsense Inference in Dialogues",
     author = "Ghosal, Deepanway  and
@@ -61,9 +62,11 @@ If these datasets are useful in your research, please cite the following papers:
     url = "https://aclanthology.org/2022.acl-long.344",
     pages = "5010--5028",
 }
+```
 
 ### CICERO-v2
 
+```
 @inproceedings{shen-et-al-cicerov2-2022,
     title = "Multiview Contextual Commonsense Inference: A New Dataset and Task",
     author = "Shen, Siqi  and 
@@ -74,3 +77,4 @@ If these datasets are useful in your research, please cite the following papers:
       Poria, Soujanya",
     journal = "arxiv"
 }
+```
