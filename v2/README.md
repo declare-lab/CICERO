@@ -6,7 +6,7 @@
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)
 
 
-This repository contains the implementation of the following paper:
+This repository contains the implementation of the following [paper](https://arxiv.org/abs/2210.02890):
 
 > **Multiview Contextual Commonsense Inference: A New Dataset and Task**<br>
 > Authors <br>
@@ -25,8 +25,7 @@ This repository contains the implementation of the following paper:
 
 Resources related to this work. 
 
-- Paper: 
-- Video: 
+- Paper: https://arxiv.org/abs/2210.02890
 - Dataset: https://github.com/declare-lab/CICERO
 
 ## System requirements
