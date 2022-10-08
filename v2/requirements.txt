@@ -88,7 +88,7 @@ nbconvert==6.5.0
 nbformat==5.4.0
 nest-asyncio==1.5.5
 nltk==3.6.6
-notebook==6.4.11
+notebook==6.4.12
 notebook-shim==0.1.0
 numexpr==2.8.1
 numpy==1.22.3
