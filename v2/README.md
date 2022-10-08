@@ -26,7 +26,7 @@ This repository contains the implementation of the following [paper](https://arx
 Resources related to this work. 
 
 - Paper: https://arxiv.org/abs/2210.02890
-- Dataset: https://github.com/declare-lab/CICERO
+- Dataset: https://github.com/declare-lab/CICERO/releases/download/v2.0.0/data.zip
 
 ## System requirements
 
