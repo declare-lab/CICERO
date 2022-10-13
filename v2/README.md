@@ -27,6 +27,7 @@ Resources related to this work.
 
 - Paper: https://arxiv.org/abs/2210.02890
 - Dataset: https://github.com/declare-lab/CICERO/releases/download/v2.0.0/data.zip
+- Demo and Saved checkpoints: https://huggingface.co/declare-lab/dialect
 
 ## Data format
 
@@ -84,7 +85,7 @@ The code is checked for the following settings.
 
 ## Documentation
 ### Data Preparation
-**[Data of v2 is not online yet]** Download CICERO v1/v2 dataset, separate samples multiview commonsense inference questions. 
+Download CICERO v1/v2 dataset, separate samples multiview commonsense inference questions. 
 ```
 sh script/download_dataset.sh
 ```
@@ -103,7 +104,7 @@ sh script/run_pretrain.sh $model
 ```
 * `--model`: The model to do the pretraining on. Will use `t5-base` model if not specified. 
 
-We provide the checkpoint based on `t5-large` [here](https://huggingface.co/shensq0814/CICEROv2)
+We provide the checkpoint based on `t5-large` [https://huggingface.co/declare-lab/dialect].)
 ### Run Finetuning and Evaluation
 Finetune the model on multiview commonsense inference task, and measure its performance of exact match accuracy and F1 score. 
 
