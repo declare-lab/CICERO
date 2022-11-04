@@ -1,4 +1,4 @@
-:fire::fire: We have released the checkpoint of our dialogue-level transformer model DIALeCT for commonsense inference generation on Huggingface along with a demo. Check it out: https://huggingface.co/declare-lab/dialect
+:fire::fire: We have released the checkpoint of our dialogue-level transformer model DIALeCT for contextual commonsense inference generation on Huggingface along with a demo. Check it out: https://huggingface.co/declare-lab/dialect
 
 # Contextualized Commonsense Inference in Dialogues (CICERO)
 
