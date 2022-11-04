@@ -1,3 +1,5 @@
+:fire::fire: We have released the checkpoint of our dialogue-level transformer model DIALeCT for commonsense inference generation on Huggingface along with a demo. Check it out: https://huggingface.co/declare-lab/dialect
+
 # Contextualized Commonsense Inference in Dialogues (CICERO)
 
 The purpose of this repository is to introduce new dialogue-level commonsense inference datasets and tasks. We chose dialogues as the data source because dialogues are known to be complex and rich in commonsense. At present, we have released two versions of the dataset:
