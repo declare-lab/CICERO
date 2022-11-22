@@ -100,7 +100,7 @@ pathtools==0.1.2
 pathy==0.6.1
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==9.1.1
+Pillow==9.3.0
 pip==21.2.4
 plotly==5.8.2
 preshed==3.0.6
